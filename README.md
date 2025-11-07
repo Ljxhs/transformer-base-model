@@ -2,33 +2,32 @@
 # English-German Transformer Translation Model
 
 ## 项目简介
+本项目实现了一个基于 **Transformer** 的 **英德（EN→DE）机器翻译模型**，包含多个实验变体（如 `NoLayerNorm`, `NoPosEnc`, `OneHead`），支持训练、验证、测试以及模型预测。  
 
-本项目实现了一个基于 **Transformer** 的 **英德（EN→DE）机器翻译模型**，包含多个实验变体（如 `NoLayerNorm`, `NoPosEnc`, `OneHead`），支持训练、验证、测试以及模型预测。
-
-- 作者: Ljxhs
-- Python 版本: 3.9+
-- 框架: PyTorch 2.0+
+- 作者: Ljxhs  
+- Python 版本: 3.9+  
+- 框架: PyTorch 2.0+  
 
 ---
 
 ## 功能与模块
 
-| 文件                            | 功能说明                                           |
-| ------------------------------- | -------------------------------------------------- |
-| `config.py`                   | 模型与训练超参数配置                               |
-| `dataset_loader.py`           | 数据加载与预处理（EN→DE）                         |
-| `encoder.py` / `decoder.py` | Transformer 编码器和解码器组件                     |
-| `modules.py`                  | Transformer 模块实现（MultiHeadAttention, FFN 等） |
-| `transformer.py`              | Transformer 模型组合                               |
-| `train.py`                    | 基础训练脚本                                       |
-| `train_utils.py`              | 训练工具函数                                       |
-| `utils.py`                    | 通用工具函数                                       |
-| `run_no_layernorm.py`         | 训练 NoLayerNorm 变体模型                          |
-| `run_no_posenc.py`            | 训练 NoPosEnc 变体模型                             |
-| `run_one_head.py`             | 训练 OneHead 模型变体                              |
-| `best_transformer.pt`         | 最优基础模型权重                                   |
-| `model_NoPosEnc.pt`           | NoPosEnc 模型权重                                  |
-| `loss_curve.png`              | 训练损失曲线示例                                   |
+| 文件 | 功能说明 |
+|------|---------|
+| `config.py` | 模型与训练超参数配置 |
+| `dataset_loader.py` | 数据加载与预处理（EN→DE） |
+| `encoder.py` / `decoder.py` | Transformer 编码器和解码器组件 |
+| `modules.py` | Transformer 模块实现（MultiHeadAttention, FFN 等） |
+| `transformer.py` | Transformer 模型组合 |
+| `train.py` | 基础训练脚本 |
+| `train_utils.py` | 训练工具函数 |
+| `utils.py` | 通用工具函数 |
+| `run_no_layernorm.py` | 训练 NoLayerNorm 变体模型 |
+| `run_no_posenc.py` | 训练 NoPosEnc 变体模型 |
+| `run_one_head.py` | 训练 OneHead 模型变体 |
+| `best_transformer.pt` | 最优基础模型权重 |
+| `model_NoPosEnc.pt` | NoPosEnc 模型权重 |
+| `loss_curve.png` | 训练损失曲线示例 |
 
 ---
 
@@ -43,7 +42,7 @@ conda activate transformer_env
 
 # 安装依赖
 pip install -r requirements.txt
-```
+````
 
 `requirements.txt` 已包含项目所需的 PyTorch、Transformers 等库。
 
@@ -150,3 +149,4 @@ Transformer-EN-DE/
 * 项目地址: [https://github.com/Ljxhs/transformer-base-model](https://github.com/Ljxhs/transformer-base-model)
 
 ---
+
